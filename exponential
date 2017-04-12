@@ -1,0 +1,7 @@
+def exponential(number, power):
+  if power == 1:
+    return number 
+  else:
+    return number * exponential(number,power-1)
+
+print(exponential(5, 2)) #25
