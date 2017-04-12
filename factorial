@@ -1,0 +1,7 @@
+def factorial(n):
+  if n==0:  #Base case- directly terminates the program 
+    return 1
+  else:
+    return n * n-1 #recursive case- reaches towards the base case
+
+print(factorial(5)) #120
