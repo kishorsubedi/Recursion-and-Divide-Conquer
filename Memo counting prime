@@ -1,0 +1,27 @@
+import math
+
+class Solution(object):
+    remember = {}
+    
+    def countPrimes(self,n):
+        count = 0 
+        for i in range(n-1,1,-1):
+            if i in self.remember:
+                return self.remember[i] + count 
+                
+            if self.checkprime(i) == True:
+                count += 1 
+                
+        self.remember[n] = count 
+        return count 
+
+    def checkprime(self,number):
+        if number == 2:
+            return True 
+        else:
+            num = int(math.sqrt(number))
+            for i in range(2,num+1):
+                if number%i == 0:
+                    return False
+            return True 
+            
